@@ -1,0 +1,158 @@
+html,
+body{
+    height: 100%;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.bookInfo {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 30px;
+    display: flex;
+    width: 420px;
+}
+
+.bookInfo:hover {
+    transition: 0.01s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 200px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.infoTxt {
+    margin-right: 50px;
+}
+
+.btnCont {
+    margin-left: auto;
+    display: flex;
+}
+
+.editBookBtn {
+    margin-top: 1px;
+    margin-right: 15px;
+    color: rgb(70, 182, 251);
+    font-size: 22px;
+}
+
+.editBookBtn:hover {
+    cursor: pointer;
+}
+
+.delBook {
+    color: red;
+    font-size: 26px;
+}
+
+.delBook:hover {
+    cursor: pointer;
+}
+
+button {
+    color: white;
+    background-color: #141414;
+    border: 1px solid rgba(54, 54, 54, 0.6);
+    font-weight: 600;
+    position: relative;
+    outline: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 45px;
+    width: 130px;
+    opacity: 1;
+    padding: 20px;
+}
+
+#applyEditBtn {
+    display: none;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalCont {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto; 
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    min-width: 380px;
+}
+
+.modalHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form span {
+    margin-left: 24px;
+}
+
+.inputField {
+    border: 1px solid black;
+    margin: 20px;
+    resize: none;
+    border-radius: 6px;
+    width: 400px;
+    height: 30px;
+    font-size: 24px;
+}
+
+select.inputField {
+    height: 36px;
+}
+
+.close {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}

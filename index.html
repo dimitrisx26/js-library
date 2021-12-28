@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>BOOKS</h1>
+        <!-- Divs are being created through JavaScript -->
+    </div>
+    <button id="btnNew">NEW BOOK</button>
+    <div id="modal" class="modal">
+        <div class="modalCont">
+            <div class="modalHeader">
+                
+                <h2>Insert Book Details</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form action="" method="get" >
+                <span>Title:</span>
+                <textarea name="title" id="title" cols="30" rows="1" class="inputField"></textarea>
+                <span>Author:</span>
+                <textarea name="author" id="author" cols="30" rows="1" class="inputField"></textarea>
+                <span>Pages:</span>
+                <input type="number" id="pages" name="pages" class="inputField">
+                <span>Is it read:</span>
+                <select name="read" id="read" class="inputField">
+                    <option value="read">Read</option>
+                    <option value="not read yet"> Not read yet</option>
+                </select>
+            </form>
+            <button id="btnAdd">ADD BOOK</button>
+            <button id="applyEditBtn">EDIT BOOK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
