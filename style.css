@@ -42,14 +42,14 @@ h1 {
     display: flex;
 }
 
-.editBookBtn {
+.editRead {
     margin-top: 1px;
     margin-right: 15px;
     color: rgb(70, 182, 251);
     font-size: 22px;
 }
 
-.editBookBtn:hover {
+.editRead:hover {
     cursor: pointer;
 }
 

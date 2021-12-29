@@ -1,7 +1,6 @@
 const modal = document.getElementById("modal");
 const btnNew = document.getElementById("btnNew");
 const btnAdd = document.getElementById("btnAdd");
-const applyEditBtn = document.getElementById("applyEditBtn");
 const closeBtn = document.getElementsByClassName("close")[0];
 const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
@@ -22,7 +21,6 @@ function Book(title, author, pages, read) {
 btnNew.addEventListener("click", function () {
   modal.style.display = "block";
   btnAdd.style.display = "flex";
-  applyEditBtn.style.display = "none";
 })
 
 closeBtn.addEventListener("click", function() {
@@ -39,37 +37,37 @@ btnAdd.addEventListener("click", function () {
   const div = document.createElement("div");
   const span = document.createElement("span");
   const divBtns = document .createElement("div");
-  const editBookBtn = document.createElement("span");
+  const editRead = document.createElement("span");
   const delDiv = document.createElement("span");
   div.dataset.num = myLibrary.length;
-  setClasses(div, span, divBtns, editBookBtn, delDiv);
-  setChilds(div, span, divBtns, editBookBtn, delDiv);
-  displayInfo(div, span, editBookBtn, delDiv);
+  setClasses(div, span, divBtns, editRead, delDiv);
+  setChilds(div, span, divBtns, editRead, delDiv);
+  displayInfo(div, span, editRead, delDiv);
   clearModal();
-  editBook(div, span, editBookBtn, applyEditBtn);
+  editBook(div, span, editRead);
   deleteBooks(delDiv, div);
 });
 
-function setClasses(div, span, divBtns, editBookBtn, delDiv) {
+function setClasses(div, span, divBtns, editRead, delDiv) {
   div.className = "bookInfo";
   span.className = "infoTxt";
   divBtns.className = "btnCont";
-  editBookBtn.className = "editBookBtn";
+  editRead.className = "editRead";
   delDiv.className = "delBook";
 }
 
-function setChilds(div, span, divBtns, editBookBtn, delDiv) {
+function setChilds(div, span, divBtns, editRead, delDiv) {
   document.getElementById("container").appendChild(div);
   div.appendChild(span);
   div.appendChild(divBtns);
-  divBtns.appendChild(editBookBtn);
+  divBtns.appendChild(editRead);
   divBtns.appendChild(delDiv);
 }
 
-function displayInfo(div, span, editBookBtn, delDiv) {
+function displayInfo(div, span, editRead, delDiv) {
   myLibrary[myLibrary.length] = new Book(titleInput.value, authorInput.value, pagesInput.value, readInput.value);
   span.innerText = myLibrary[myLibrary.length - 1].info();
-  editBookBtn.innerHTML = "&#128366;";
+  editRead.innerHTML = "&#128366;";
   delDiv.innerHTML = "&times";
 }
 
@@ -81,8 +79,8 @@ function clearModal() {
   modal.style.display = "none";
 }
 
-function editBook(div, span, editBookBtn, applyEditBtn) {
-  editBookBtn.addEventListener("click", function () {
+function editBook(div, span, editRead) {
+  editRead.addEventListener("click", function () {
     if (myLibrary[div.dataset.num].read === "read") {
       myLibrary[div.dataset.num].read = "not read yet";
       span.textContent = myLibrary[div.dataset.num].info();
